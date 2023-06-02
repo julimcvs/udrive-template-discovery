@@ -13,7 +13,7 @@ async function findMailValidation(req) {
     const html = fs.readFileSync(templatePath)
         .toString()
         .replace('${GREETING}', req.body.name)
-        .replace('${TOKEN}', req.body.tokenUrl);
+        .replace('${PASSWORD}', req.body.password);
     return html;
 }
 
